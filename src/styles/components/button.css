@@ -1,0 +1,58 @@
+.btn-group {
+  box-shadow: 0 0 15px 2px rgba(46 , 16 , 101 , 0.6);
+}
+
+.showreel-animation {
+  background: conic-gradient(
+    from 0deg,
+    #f841da 0%,
+    #a855f7 50%,
+    #2b39fd 75%,
+    #06b6d4 100%
+  );
+  animation: spin 1.5s linear infinite;
+  filter: blur(3px);
+  transition: background 0.3s ease;
+}
+.btn-group:hover .showreel-animation {
+  animation-play-state: paused;
+  background: conic-gradient(
+    from 0deg,
+    #f841da ,
+    #a855f7 ,
+    #2b39fd ,
+    #06b6d4 
+  );
+  opacity: 1;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@property --spread {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 50%;
+}
+
+.showreel-animation {
+  background: conic-gradient(
+    from 0deg,
+    #a855f7 0%,
+    #06b6d4 var(--spread),
+    transparent var(--spread)
+  );
+  animation: spin 1.5s linear infinite;
+  transition: --spread 0.1s ease;
+}
+
+.btn-group:hover .showreel-animation {
+  --spread: 100%;
+  animation-play-state: paused;
+}
