@@ -9,7 +9,7 @@ const Home: React.FC = () => {
       <div className="flex flex-col gap-20">
         <HomeHeadSection />
         {SERVICES_DATA.map((service, index) => (
-          <ProfileCard key={service.id} data={service} index={index} />
+          <ProfileCard key={service.id} data={service} index={index} className='colored-bg'/>
         ))}
         <article className="text-center w-2/3 m-auto space-y-5">
           <p className="text-center font-bold text-4xl mb-20">

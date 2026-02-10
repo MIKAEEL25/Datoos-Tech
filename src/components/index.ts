@@ -7,3 +7,6 @@ export { default as Button } from './buttton/index';
 export { default as HomeHeadSection } from './sections/HomeSection';
 export { default as ProfileCard } from './card/ProfileCard';
 export { default as Faq } from './sections/Faq';
+export { default as StudioTabel } from './sections/StudioTabel';
+export { default as StudioFootNote } from './sections/StudioFootNote';
+export {default as ImageSlider} from './imageSlider/ImageSlider';

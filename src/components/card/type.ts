@@ -4,12 +4,13 @@ interface ServiceData {
   category: string;
   items: string[];
   image: string;
-  link: string;
+  link: string | undefined;
 }
 
 export interface Props {
   data: ServiceData;
   index: number;
+  className?: string;
 }
 
 export interface DescriptionProps {
@@ -18,5 +19,5 @@ export interface DescriptionProps {
   title: string;
   category: string;
   items: string[];
-  link: string;
+  link: string | undefined;
 }

@@ -28,13 +28,14 @@ const Description: React.FC<DescriptionProps> = ({
           ))}
         </ul>
       </div>
-
-      <Link
-        to={`/${link}`}
-        className="inline-block border-b border-blue-500 pb-1 text-sm hover:text-blue-400 transition-all"
-      >
-        Learn More ↗
-      </Link>
+      {link && (
+        <Link
+          to={`/${link}`}
+          className="inline-block border-b border-blue-500 pb-1 text-sm hover:text-blue-400 transition-all"
+        >
+          Learn More ↗
+        </Link>
+      )}
     </div>
   );
 };
