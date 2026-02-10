@@ -4,9 +4,10 @@ import Arrow from './Arrow';
 
 interface ImageSliderProps {
   images: string[];
+  className?: string;
 }
 
-const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
+const ImageSlider: React.FC<ImageSliderProps> = ({ images, className }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -14,12 +15,14 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length,
+    );
   };
 
   return (
-    <div className="relative my-20 w-full max-w-4xl mx-auto flex flex-col items-center group">
-      <div className="relative w-full aspect-video overflow-hidden rounded-[2rem] bg-transparent shadow-2xl">
+    <div className="relative my-20 w-full  max-w-4xl mx-auto flex flex-col items-center group">
+      <div className="relative w-full aspect-video overflow-hidden border-2 border-purple-400 rounded-[2rem] bg-transparent shadow-2xl">
         <AnimatePresence mode="wait">
           <motion.img
             key={currentIndex}
@@ -27,8 +30,8 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="w-full h-full object-cover"
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className={`${className ? className : 'w-full'} h-full object-cover`}
           />
         </AnimatePresence>
         <Arrow onClick={handlePrev} direction="left" />

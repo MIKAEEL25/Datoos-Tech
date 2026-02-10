@@ -1,6 +1,6 @@
-import { ProfileCard } from '@/components';
+import { ColoredBorder, ProfileCard } from '@/components';
 import { ImageSlider } from '@/components';
-import { StudioFootNote } from '@/components';
+import { FootNote } from '@/components';
 import { StudioTabel } from '@/components';
 
 import { IMAGES, STUDIO_CARDS, STUDIO_TABEL } from '@/util/studio';
@@ -28,14 +28,12 @@ const Studios = () => {
                 index={card.id === '05 /' ? 2 : index + 1}
                 className="bg-transparent"
               />
-              {card.id !== '03 /' && (
-                <span className="colored-border rounded-full w-2/6 h-1 m-auto"></span>
-              )}
+              {card.id !== '03 /' && <ColoredBorder />}
             </>
           ))}
         </div>
       </div>
-      <StudioFootNote />
+      <FootNote />
     </>
   );
 };
