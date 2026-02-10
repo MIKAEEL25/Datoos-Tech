@@ -1,4 +1,9 @@
 export { default as Links } from './footer/Links';
 export { default as Footer } from './footer/index';
-export {default as Image} from './image/index';
-export {default as Navigation} from './navigation/index';
+export { default as Image } from './image/index';
+export { default as Navigation } from './navigation/index';
+export { default as LogoLoop } from './logoLoop/LogoLoop';
+export { default as Button } from './buttton/index';
+export { default as HomeHeadSection } from './sections/HomeSection';
+export { default as ProfileCard } from './card/ProfileCard';
+export { default as Faq } from './sections/Faq';

@@ -21,13 +21,13 @@
       sans-serif;
     color: white;
   }
-  .gradient-text {
+  .colored-text {
     background: linear-gradient(
       90deg,
       rgba(204, 13, 214, 1) 0%,
-      rgba(123, 26, 201, 1) 25%,
-      rgba(86, 196, 204, 1) 50%,
-      rgba(62, 86, 176, 1) 75%
+      rgba(123, 26, 201, 1) 30%,
+      rgba(86, 196, 204, 1) 40%,
+      rgba(62, 86, 176, 1) 70%
     );
 
     -webkit-background-clip: text;
@@ -36,4 +36,60 @@
     background-clip: text;
     color: transparent;
   }
+  .colored-bg {
+    background: #2b004f;
+    background: radial-gradient(
+      circle,
+      rgba(43, 0, 79, 0.5) 0%,
+      rgba(0, 52, 84, 0.5) 55%,
+      rgba(0, 0, 0, 0.5) 72%,
+      rgba(0, 0, 0, 0.5) 82%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  }
+}
+
+@theme {
+  --background-primary: rgba(18, 0, 32, 1);
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
 }

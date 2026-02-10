@@ -1,5 +1,5 @@
 .btn-group {
-  box-shadow: 0 0 15px 2px rgba(46 , 16 , 101 , 0.6);
+  box-shadow: 0 0 15px 2px rgba(168, 111, 255, 0.6);
 }
 
 .showreel-animation {
@@ -16,13 +16,7 @@
 }
 .btn-group:hover .showreel-animation {
   animation-play-state: paused;
-  background: conic-gradient(
-    from 0deg,
-    #f841da ,
-    #a855f7 ,
-    #2b39fd ,
-    #06b6d4 
-  );
+  background: conic-gradient(from 0deg, #f841da, #a855f7, #2b39fd, #06b6d4);
   opacity: 1;
 }
 

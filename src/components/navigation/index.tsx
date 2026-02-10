@@ -3,7 +3,7 @@ import Button from '../buttton';
 
 const Navigation = () => {
   return (
-    <nav className="absolute top-6 left-1/2 -translate-x-1/2 z-10 flex justify-between items-center w-[90%]">
+    <nav className="absolute top-6 left-1/2 -translate-x-1/2 z-100 flex justify-between items-center w-[90%]">
       <h1 className="font-bold text-6xl">
         <Link to="/">Solid Company</Link>
       </h1>
