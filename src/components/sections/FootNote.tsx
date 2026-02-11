@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from '../buttton';
 import ColoredBorder from '../coloredBorder';
 
@@ -9,8 +10,10 @@ const FootNote = () => {
         We love collaborating with passionate creators. If you have a project in
         mind, we’d love to hear about it and explore how we can help.
       </p>
-      <Button to="/contact">Get in touch</Button>
-      <ColoredBorder className='w-8/12' />
+      <Button type="button">
+        <Link to="/contact">Get in touch</Link>
+      </Button>
+      <ColoredBorder className="w-8/12" />
     </div>
   );
 };

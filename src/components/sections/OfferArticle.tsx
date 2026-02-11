@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from '../buttton';
 import Glassmorphism from '../glassmorphism/Glassmorphism';
 import FeaturesList from './FeaturesList';
@@ -38,7 +39,9 @@ const OfferArticles = () => {
           />
         </div>
         <div className="w-fit m-auto mt-10">
-          <Button>Book Now</Button>
+          <Button type="button">
+            <Link to={'/contact'}>Book Now</Link>
+          </Button>
         </div>
       </article>
       <article className="mt-20 w-11/12 m-auto">

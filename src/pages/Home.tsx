@@ -1,5 +1,6 @@
 import { Faq, HomeHeadSection } from '@/components';
 import { ProfileCard } from '@/components';
+import HomeTabel from '@/components/sections/HomeTabel';
 import { FAQ_DATA } from '@/util/faq';
 import { SERVICES_DATA } from '@/util/services';
 
@@ -9,7 +10,12 @@ const Home: React.FC = () => {
       <div className="flex flex-col gap-20">
         <HomeHeadSection />
         {SERVICES_DATA.map((service, index) => (
-          <ProfileCard key={service.id} data={service} index={index} className='colored-bg'/>
+          <ProfileCard
+            key={service.id}
+            data={service}
+            index={index}
+            className="colored-bg"
+          />
         ))}
         <article className="text-center w-2/3 m-auto space-y-5">
           <p className="text-center font-bold text-4xl mb-20">
@@ -26,6 +32,7 @@ const Home: React.FC = () => {
           </p>
         </article>
       </div>
+      <HomeTabel />
       <Faq data={FAQ_DATA} />
     </>
   );

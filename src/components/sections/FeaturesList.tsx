@@ -5,7 +5,7 @@ type FeaturesListProps = {
 
 const FeaturesList: React.FC<{ data: FeaturesListProps[] }> = ({ data }) => {
   return (
-    <ul className={'text-left text-xl list-disc list-inside'}>
+    <ul className={'text-left text-xl list-disc list-inside leading-loose'}>
       {data.map((item) => (
         <li
           key={item.title}

@@ -21,7 +21,7 @@ const HomeHeadSection = () => {
           </h1>
         </div>
         <LogoLoop logos={IMAGE_LOGOS} gap={100} />
-        <Button to="">Showreel</Button>
+        <Button type="button">Showreel</Button>
         <p className="text-6xl font-bold">
           <span className="colored-text">Reliable, High Performance</span>
           <br /> Studio for Visionary Creators

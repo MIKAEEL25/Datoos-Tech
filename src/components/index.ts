@@ -11,4 +11,6 @@ export { default as StudioTabel } from './sections/StudioTabel';
 export { default as FootNote } from './sections/FootNote';
 export { default as ImageSlider } from './imageSlider/ImageSlider';
 export { default as ColoredBorder } from './coloredBorder/index';
-export { default as OfferArticles } from './sections/OfferArticles';
+export { default as OfferArticle } from './sections/OfferArticle';
+export { default as Form } from './form/index';
+export { default as CastingArticle } from './sections/CastingArticle';

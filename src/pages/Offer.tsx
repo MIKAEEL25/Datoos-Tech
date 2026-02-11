@@ -2,7 +2,7 @@ import {
   ColoredBorder,
   FootNote,
   ImageSlider,
-  OfferArticles,
+  OfferArticle,
 } from '@/components';
 import { IMAGES } from '@/util/studio';
 
@@ -10,7 +10,7 @@ const Offer = () => {
   return (
     <>
       <div className="mt-40 text-center colored-bg">
-        <OfferArticles />
+        <OfferArticle />
       </div>
       <div className="w-2/6 m-auto">
         <ImageSlider images={IMAGES} />

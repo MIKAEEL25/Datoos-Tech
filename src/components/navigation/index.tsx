@@ -12,7 +12,7 @@ const Navigation = () => {
         <Link to="/studios">Our Studios</Link>
         <Link to="/offer">What We Offer</Link>
         <Link to="/contact">
-          {location.pathname !== '/contact' && <Button to="/contact">Contact Us</Button>}
+          {location.pathname !== '/contact' && <Button type='button'>Contact Us</Button>}
         </Link>
       </ul>
     </nav>
