@@ -21,8 +21,8 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, className }) => {
   };
 
   return (
-    <div className="relative my-20 w-full  max-w-4xl mx-auto flex flex-col items-center group">
-      <div className="relative w-full aspect-video overflow-hidden border-2 border-purple-400 rounded-[2rem] bg-transparent shadow-2xl">
+    <div className="relative my-20 w-11/12  max-w-4xl mx-auto flex flex-col items-center group">
+      <div className="w-full aspect-video overflow-hidden border-2 border-violet-400 rounded-4xl bg-transparent shadow-2xl">
         <AnimatePresence mode="wait">
           <motion.img
             key={currentIndex}
@@ -43,8 +43,8 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, className }) => {
             key={index}
             onClick={() => setCurrentIndex(index)}
             animate={{
-              scale: currentIndex === index ? 1.2 : 1,
-              backgroundColor: currentIndex === index ? '#a855f7' : '#3f3f46',
+              scale: currentIndex === index ? 1.5 : 0.7,
+              backgroundColor: '#a855f7',
             }}
             className="w-2.5 h-2.5 rounded-full cursor-pointer transition-colors duration-300"
           />

@@ -5,12 +5,14 @@ import Studios from './pages/Studios';
 import Offer from './pages/Offer';
 import Casting from './pages/Casting';
 import Contact from './pages/Contact';
+import Error from './pages/Error';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
       element: <RootLayout />,
+      errorElement : <Error />,
       children: [
         {
           index: true,

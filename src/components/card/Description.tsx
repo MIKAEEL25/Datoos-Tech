@@ -18,10 +18,13 @@ const Description: React.FC<DescriptionProps> = ({
         </h2>
       </div>
       <div className="space-y-3">
-        <h3 className="colored-text text-xl">{category}</h3>
-        <ul className="grid grid-cols-2 text-white text-l ml-8">
+        <h3 className="colored-text text-xl whitespace-pre-line">{category}</h3>
+        <ul className="grid gap-1 text-white text-[1rem] ml-8">
           {items.map((item, idx) => (
-            <li key={idx} className="flex items-center gap-2">
+            <li
+              key={idx}
+              className="flex items-center gap-2 text-xs md:text-xl"
+            >
               <span className="w-1 h-1 bg-gray-500 rounded-full"></span>
               {item}
             </li>
@@ -31,9 +34,10 @@ const Description: React.FC<DescriptionProps> = ({
       {link && (
         <Link
           to={`/${link}`}
-          className="inline-block border-b border-blue-500 pb-1 text-sm hover:text-blue-400 transition-all"
+          className="inline-block relative text-sm hover:text-blue-400"
         >
           Learn More ↗
+          <div className="absolute bottom-0 left-0 h-0.5 w-full bg-linear-to-r from-purple-500 to-blue-500"></div>
         </Link>
       )}
     </div>

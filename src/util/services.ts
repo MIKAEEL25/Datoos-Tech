@@ -5,7 +5,7 @@ import studioControl from '@/assets/images/Studio C control room.jpg'
 export const SERVICES_DATA = [
   {
     id: '01 / SERVICES',
-    title: 'Flawless performance from start to finish',
+    title: `Flawless performance from start to finish`,
     category: 'Production',
     items: [
       'Virtual Art Department',

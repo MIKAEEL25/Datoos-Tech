@@ -1,7 +1,7 @@
 export const CASTING_DATA = [
   {
     title: `Solid Company is building the future of decentralized entertainment and we’re looking for fresh talent to join our platform and upcoming show series.
-            We are currently seeking:`,
+            We are currently seeking`,
     features: '',
   },
   {
@@ -9,7 +9,7 @@ export const CASTING_DATA = [
     features: `Charismatic, confident on-camera personalities to host short-form and long-form segments about Web3, crypto, NFTs, DeFi, and the creator economy. Must be comfortable speaking clearly, engaging an audience, and explaining complex topics in an accessible way.`,
   },
   {
-    title: `Models & Actors for Show Series:`,
+    title: `Models & Actors for Show Series`,
     features: `All looks, ages (18+), and experience levels welcome. Roles range from models for inhouse fashion productions, commercials, featured talent to speaking parts in narrative series, promotional content, and virtual/metaverse productions.
 `,
   },

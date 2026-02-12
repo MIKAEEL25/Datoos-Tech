@@ -13,13 +13,13 @@ interface SpecTableProps {
 
 const StudioTabel: React.FC<SpecTableProps> = ({ headers, data }) => {
   return (
-    <div className="w-fit m-auto max-w-5xl bg-transparent p-6">
+    <div className="w-fit m-auto max-w-5xl bg-transparent">
       <table className="w-full text-white border-collapse">
         <thead>
           <tr className="border-b-[3px] border-whitetext-2xl tracking-tight">
-            <th className="py-3 text-left w-1/3  text-3xl">{headers[0]}</th>
-            <th className="py-3 text-center w-1/3 text-3xl">{headers[1]}</th>
-            <th className="py-3 text-right w-1/3 text-3xl">{headers[2]}</th>
+            <th className="py-3 text-left w-1/3  sm:text-3xl">{headers[0]}</th>
+            <th className="py-3 text-center w-1/3 sm:text-3xl">{headers[1]}</th>
+            <th className="py-3 text-right w-1/3 sm:text-3xl">{headers[2]}</th>
           </tr>
         </thead>
         <tbody className="text-l md:text-xl font-bold">

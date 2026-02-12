@@ -11,7 +11,7 @@ export const Faq : React.FC<{ data: FAQItem[] }> = ({ data }) => {
   return (
     <div className="max-w-2xl mx-auto py-20 px-4">
       <h2 className="text-3xl md:text-4xl font-semibold text-center text-white mb-10">
-        Frequently Asked <br /> <span className="colored-text">Questions</span>
+        Frequently Asked <br /> <span className="bg-clip-text text-transparent bg-linear-to-r from-violet-600/80 to-cyan-600">Questions</span>
       </h2>
       <div className="space-y-5">
         {data.map((item, index) => {
@@ -21,18 +21,19 @@ export const Faq : React.FC<{ data: FAQItem[] }> = ({ data }) => {
               key={index}
               onClick={() => toggle(index)}
               className={`cursor-pointer
-                rounded-[10px]
+                rounded-[30px]
                 border border-white/20
-                bg-gradient-to-r from-fuchsia-500/20 to-blue-500/20
+                bg-linear-to-br from-emerald-950/30 to-purple-950/20
                 backdrop-blur-xl
                 p-5
                 transition-all duration-500`}
             >
-              <div className="flex justify-between items-center text-white font-medium">
+              <div className="flex justify-between items-center text-white font-medium p-2">
                 <span>{item.question}</span>
                 <span
                   className={` text-xl
                     transition-transform duration-500
+                    font-extrabold
                     ${isActive ? 'rotate-45' : ''}`}
                 >
                   +

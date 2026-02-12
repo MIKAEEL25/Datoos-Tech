@@ -1,6 +1,6 @@
 .input {
   @apply w-full text-xl bg-transparent border-2 border-purple-400
-   rounded-[30px] p-6 focus:outline-none
+   rounded-[30px] p-3 sm:p-6 focus:outline-none
     focus:ring-0  hover:border-sky-400
     autofill:transition-colors autofill:duration-5000000;
 }

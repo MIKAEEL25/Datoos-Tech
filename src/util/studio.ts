@@ -1,6 +1,6 @@
 import image1 from '@/assets/images/studio a - alley.jpg';
 import image2 from '@/assets/images/Studio A control room.jpg';
-import image3 from '@/assets/images/Studio C control room.jpg';
+import image3 from '@/assets/images/_HYM1898-Hi Res-2 1.jpg';
 import image4 from '@/assets/images/Studio B Control room 1.jpg';
 import image5 from '@/assets/images/Studio C image.jpg';
 import image6 from '@/assets/images/IMG_1993 1.jpg';
@@ -11,15 +11,15 @@ export const STUDIO_CARDS = [
     title: 'Studio A The Headliner',
     category: '',
     items: [
-      ' powered by the world’s most advanced LED Volume – floor-to-ceiling curved displays delivering photorealistic real-time environments with perfect parallax, interactive lighting, and zero green-screen limitations.',
-      ' Key Specifications:',
-      '      LED Volume: Massive curved wall with integrated floor panels for seamless, photorealistic backgrounds. Supports 10-bit and OCIO color transform for highest color accuracy.',
-      ' AI Workflow: Integrating the latest AI  technology to bring your vision to life in a short amount of time.',
+      'powered by the world’s most advanced LED Volume – floor-to-ceiling curved displays delivering photorealistic real-time environments with perfect parallax, interactive lighting, and zero green-screen limitations.',
+      'Key Specifications:',
+      'LED Volume: Massive curved wall with integrated floor panels for seamless, photorealistic backgrounds. Supports 10-bit and OCIO color transform for highest color accuracy.',
+      'AI Workflow: Integrating the latest AI  technology to bring your vision to life in a short amount of time.',
       'Cameras: Four RED Komodo and one RED Raptor systems capturing 4K–8K resolution with exceptional dynamic range.',
       'Lighting: Full professional grid with precise, programmable control for perfect scene integration.',
       'Audio: Integrated high-fidelity surround sound system.',
     ],
-    image : image1,
+    image: image1,
     link: undefined,
   },
   {
@@ -38,7 +38,7 @@ export const STUDIO_CARDS = [
 
       'This setup delivers unmatched speed, precision, and creative control.',
     ],
-      image : image2,
+    image: image2,
     link: undefined,
   },
   {
@@ -48,7 +48,7 @@ export const STUDIO_CARDS = [
     items: [
       `A high-performance virtual production stage anchored by a 7.5-meter curved LED Volume wall. Paired with a professional lighting grid, it enables dynamic, fully interactive environments for premium film, TV, and commercial productions.`,
     ],
-    image : image3,
+    image: image3,
     link: undefined,
   },
   {
@@ -61,7 +61,7 @@ LED Wall, the control room transforms imaginative visions into tangible realitie
 enabling full-spectrum oversight of virtual environments, dynamic lighting, and
 advanced audio-visual systems.`,
     ],
-    image : image4,
+    image: image4,
     link: undefined,
   },
   {
@@ -76,7 +76,7 @@ Purpose-built for directors, engineers, and producers who refuse to
 compromise, the control room allows creators to seamlessly shape audio, visuals,
 and live performance flow in real time.`,
     ],
-    image : image5,
+    image: image5,
     link: undefined,
   },
   {
@@ -90,7 +90,7 @@ and live performance flow in real time.`,
       'Ideal for bold lighting effects, e-commerce shoots, couture, and stylized creative work.',
       'A true blank canvas engineered for visual excellence.',
     ],
-    image : image6,
+    image: image6,
     link: undefined,
   },
 ];
@@ -129,5 +129,6 @@ import img3 from '@/assets/images/Studio B Control room 1.jpg';
 import img4 from '@/assets/images/Studio C image.jpg';
 import img5 from '@/assets/images/Studio A main 2.jpg';
 import img6 from '@/assets/images/space bar 1 & studio a - tunnel.jpg';
+import img7 from '@/assets/images/studio a - weex.jpg';
 
-export const IMAGES = [img1, img2, img3, img4, img5, img6];
+export const IMAGES = [img1, img6, img7, img3, img4, img5, img2];

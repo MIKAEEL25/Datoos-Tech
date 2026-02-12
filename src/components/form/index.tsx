@@ -1,82 +1,49 @@
-import { useState } from 'react';
-import Button from '../buttton';
-import ColoredBorder from '../coloredBorder';
-import Input from './Input';
-import type { SignUpFormState } from './types';
-import { hasMinLength, isEmail, isNotEmpty } from '@/util/validation';
+import { useForm, type SubmitHandler } from "react-hook-form";
+import Input  from "../input/index";
+import ColoredBorder from "../coloredBorder";
+import Button from "../buttton";
+import type { IFormInput } from "./types";
+
+
 
 const Form = () => {
-  const [formData, setFormData] = useState<SignUpFormState>({
-    name: '',
-    email: '',
-    message: '',
-  });
-  const [errors, setErrors] = useState<string[]>([]);
-  const onChangeHadnler = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    const { name, value } = event.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
-  function onSubmitHandler(event: React.ChangeEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const newErrors: string[] = [];
-    if (!isEmail(formData.email)) {
-      newErrors.push('Invalid Email');
-    }
-    if (!isNotEmpty(formData.name)) {
-      newErrors.push('Please Enter Your Name');
-    }
-    if (!isNotEmpty(formData.message)) {
-      newErrors.push('Please Enter Your Message');
-    }
-    if (!hasMinLength(formData.message, 5)) {
-      newErrors.push('Your Message Should Be More Than 5 Characters');
-    }
-    setErrors(newErrors);
+  const { register, handleSubmit, formState: { errors } } = useForm<IFormInput>();
 
-    console.log(formData);
-  }
+  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+    console.log("Data:", data);
+  };
+
   return (
-    <form onSubmit={onSubmitHandler} className="w-1/2 mx-auto">
-      {errors && (
-        <ul className="m-15 text-red-500 text-xl list-disc">
-          {errors.map((error) => (
-            <li key={error}>{error}</li>
-          ))}
-        </ul>
-      )}
-      <Input
-        name="name"
-        type="name"
-        placeHolder="Enter Your Name"
-        handleChange={onChangeHadnler}
-        value={formData.name}
+    <form onSubmit={handleSubmit(onSubmit)} className="w-full md:w-3/4 xl:w-1/2 mx-auto">
+      <Input 
+        type="text" 
+        placeHolder="Enter Your Name" 
+        {...register("name", { required: "Name is required" })} 
       />
-      <Input
-        name="email"
-        type="email"
-        placeHolder="Enter Your Email"
-        handleChange={onChangeHadnler}
-        value={formData.email}
+      {errors.name && <span className="text-red-500">{errors.name.message}</span>}
+
+      <Input 
+        type="email" 
+        placeHolder="Enter Your Email" 
+        {...register("email", { required: "Email is required" })} 
       />
+
       <div className="relative z-0 w-full mb-5 p-10">
-        <label
-          htmlFor="message"
-          className="absolute text-2xl text-body -translate-y-6 top-3"
-        >
+        <label htmlFor="message" className="absolute text-2xl text-body -translate-y-6 top-3">
           Message
         </label>
         <textarea
           id="message"
           placeholder="Enter Your Message"
-          className="input h-96"
-          onChange={onChangeHadnler}
-          defaultValue={formData.message}
+          className="input h-96 w-full"
+          {...register("message", { required: "Message cannot be empty" })}
         ></textarea>
       </div>
+
       <div className="flex flex-col items-center gap-20 w-full">
-        <Button type="submit">Submit</Button>
+        <Button type="submit">
+          Submit
+        </Button>
         <ColoredBorder className="w-full" />
       </div>
     </form>

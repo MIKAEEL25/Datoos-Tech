@@ -21,7 +21,7 @@ const Glassmorphism: React.FC<HoverButtonProps> = ({
       onMouseLeave={() => setIsHovered(false)}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="relative overflow-hidden min-w-[400px] h-[120px] rounded-[1.5rem] border-2 border-purple-400 border-b-0 bg-(--background-primary) backdrop-blur-md flex items-center justify-center shadow-[0_0_30px_rgba(168,85,247,0.2)]"
+      className="relative overflow-hidden max-w-35 md:max-w-70 h-30 rounded-[1.7rem] border-2 border-purple-400 border-b-0 bg-(--background-primary) backdrop-blur-md flex items-center justify-center shadow-[0_0_30px_rgba(168,85,247,0.2)]"
     >
       <AnimatePresence mode="wait">
         {!isHovered ? (
@@ -31,7 +31,7 @@ const Glassmorphism: React.FC<HoverButtonProps> = ({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="text-white text-4xl font-bold tracking-tight px-6 text-center"
+            className="text-white text-xs md:text-4xl font-bold tracking-tight px-6 text-center"
           >
             {initialText}
           </motion.span>
@@ -42,7 +42,7 @@ const Glassmorphism: React.FC<HoverButtonProps> = ({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0 }}
-            className="text-white text-xl whitespace-pre-line px-6"
+            className="text-white text-xs md:text-xl whitespace-pre-line px-6"
           >
             {hoverText}
           </motion.span>
@@ -51,7 +51,7 @@ const Glassmorphism: React.FC<HoverButtonProps> = ({
       {isHovered && (
         <motion.div
           layoutId="glow"
-          className="absolute inset-0 bg-white/10 blur-xl rounded-full"
+          className="absolute inset-0 blur-xl rounded-full"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         />

@@ -7,10 +7,10 @@ const Button: React.FC<{
   return (
     <button
       type={type}
-      className="btn-group relative h-14 w-44 overflow-hidden rounded-full bg-(--background-primary) transition-all"
+      className="btn-group relative h-14 md:w-44 w-25 overflow-hidden rounded-full bg-(--background-primary) transition-all"
     >
       <div className="showreel-animation absolute inset-[-150%]" />
-      <div className="absolute inset-[3px] rounded-full bg-(--background-primary) flex items-center justify-center">
+      <div className="absolute inset-0.75 rounded-full bg-(--background-primary) flex items-center justify-center">
         <span className="text-white">{children}</span>
       </div>
     </button>
